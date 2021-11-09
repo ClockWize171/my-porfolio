@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+{{ title }}
+{% endblock title %} 
+
+{% block content %}
+
+<div class="row" id="home">
+    <div class="col-md-6">
+        <img class="img-fluid" src="{% static 'image/test1.jpg' %}" id="grayscale" alt="profile.jpg"><br>
+    </div>
+    <div class="col-md-6" >
+        <h1>Hello mate, I am Min Htin</h1>
+        <p id="intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam eius esse quod, neque provident id ipsum adipisci ab fuga quaerat molestiae cumque iusto, cupiditate, incidunt et perferendis animi delectus sunt non magnam saepe eligendi quis omnis? Odio fugiat atque molestias, vel, pariatur nisi voluptas necessitatibus fuga tenetur ipsam nihil sed alias? Minima, natus quis veniam modi nobis possimus quos, doloremque necessitatibus tempore debitis incidunt officiis suscipit veritatis hic obcaecati mollitia, similique nisi iure optio autem enim eos laborum nihil. Officiis et aspernatur ut, libero autem laborum quibusdam? Maiores perspiciatis non, deserunt delectus, nesciunt earum excepturi quasi aut, pariatur cumque incidunt.</p>
+    </div>
+</div>
+<canvas class="webgl">
+</canvas>
+{% endblock content %} 

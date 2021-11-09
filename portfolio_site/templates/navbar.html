@@ -1,0 +1,46 @@
+<style>
+  h4 {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Red Hat Mono', monospace;  
+  font-size: 28px;
+  color: white;
+}
+
+/* Animation */
+h4 {
+  animation: animated-text 2s steps(14,end) 1s 1 normal both,
+             animated-cursor 600ms steps(14,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 235px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
+}
+</style>
+<nav class="navbar-default" id="overlay">
+<div class="logo">
+  <h4>welcome mates.</h4>
+</div>
+<ul class="nav-link">
+  <li><a href="{% url 'home' %}" class="gradient-text">Home</a></li>
+  <li><a href="{% url 'aboutme' %}" class="gradient-text">About Me</a></li>
+  <li><a href="{% url 'project' %}" class="gradient-text">My Project</a></li>
+  <li><a href="{% url 'contact' %}" class="gradient-text">Contact</a></li>
+</ul>
+<div class="burger">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+</div>
+</nav>

@@ -1,0 +1,355 @@
+*
+{
+    margin: 0;
+    padding-top: 0;
+}
+
+html,
+body
+{
+    min-height: 100%;
+    clear: both;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1,h3,p,button{
+    color:white;
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+.aboutme{
+    margin-top: 5vh;
+    text-align: justify; 
+    margin: center;
+}
+
+/* start form session */
+
+h1.form{
+    margin-top: 5vh;
+    text-align:center;
+}
+
+/* end form session */
+
+/* start footer session */
+
+footer.custom {
+    color:white;
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+.gradient-text{
+    background-image: -webkit-linear-gradient(left, white 25%, #5CFF5C 37.5%, #2EFF2E, #00FF00 62.5%, white 75%);
+    background-image: linear-gradient(90deg, white 25%, #5CFF5C 37.5%, #2EFF2E, #00FF00 62.5%, white 75%);
+    background-position: right center;
+    background-size: 400% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: white;
+    width: 200px;
+    font-weight: 900;
+    -webkit-text-fill-color: transparent;
+    transition: color 200ms linear;
+}
+
+.gradient-text:hover{
+    background-position: left center;
+    color: #ef9671;
+    transition: background-position 2000ms ease-out;
+}
+
+/*  end footer session */
+
+
+/* start image sizing */
+
+img#aboutme{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 400px;  
+}
+
+img#grayscale{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 300px;
+    border-radius: 60%;
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+img#grayscale:hover{
+    filter: grayscale(0);
+    box-shadow: 0 0 11px #5CFF5C;
+}
+
+/* img#grayscale {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+img#grayscale:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+    box-shadow: 0 0 11px #5CFF5C;
+} */
+
+/* end image sizing */
+
+
+/* div sizing session */
+div#home{
+    margin-top: 10vh;
+    margin-right: 5vh;
+    margin-left: 5vh;
+}
+
+div#aboutme{
+    margin-top: 5vh;
+    margin-right: 5vh;
+    margin-left: 5vh;
+}
+
+p#intro{
+    margin-top: 5vh;
+    text-align: justify;
+}
+/* end div sizing session  */
+
+
+/* start progress bar */
+h3{
+    text-align: center;
+}
+/* end progress bar */
+
+/* start card customizing */
+
+/* end card customizing */
+
+
+/* start navigation session */
+
+nav{
+    position: sticky;
+    top: 1px; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: transparent;
+    font-family: 'Noto Sans Mono', monospace;
+    z-index: 9998;
+}
+
+.scrolled{
+    background-color: blue;
+}
+
+.logo{
+    color: #fff;
+    font-size: 20px;
+}
+
+.nav-link{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-link li{
+    list-style-type: none;
+}
+
+.nav-link a{
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width:25px;
+    height:2px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+
+}
+
+@media  screen and (max-width: 1024px){
+    .nav-link{
+        width: 70%;
+    }
+}
+
+@media  screen and (max-width: 768px){
+    html,body{
+        overflow-x: hidden;
+        height: 100%;
+        width: 100%;
+        font-family: 'Poppins';
+    }
+    canvas{
+        z-index : -9999;
+        position: absolute;
+        top : 0;
+        left    : 0;
+        width   : 100%;
+        height  : 100%;
+        margin  : 0;
+        padding : 0;  
+    }
+
+    nav.navbar-default{
+        background-color: #191A19;
+    }
+
+    .nav-link{
+        position: absolute;
+        right: -11px;
+        height: 92vh;
+        top: 8vh;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        /* background-color: black; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-link li {
+        opacity: 0;
+    }
+
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from { 
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-3.5px,-6px);
+}
+
+/* end navigation session */
+
+
+/* start three js  */
+canvas
+{
+    /* position: relative;
+    top: 0;
+    left: 0;
+    outline: none; */
+    z-index : -9999;
+    position: absolute;
+    top : 0;
+    left    : 0;
+    width   : 100%;
+    height  : 100%;
+    margin  : 0;
+    padding : 0;
+}
+/* end three js  */
+
+/* start preloader */
+
+.preload-finish{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.preloader {
+    position: absolute !important;
+    margin-right: 100px;
+    background-color: #191A19 ;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    transition: all 0.5 ease;
+    overflow-x: hidden;
+}
+
+.loader-p{
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+  }
+  
+  .loader-p:before, .loader-p:after{
+    content: '';
+    border: 1em solid #15e38a;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+  }
+  
+  .loader-p:before{
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes loader{
+    0%{
+      transform: scale(0);
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+/* end preloader */

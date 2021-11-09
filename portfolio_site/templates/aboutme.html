@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="row" id="aboutme">
+    <div class="col-md-6">
+        <h1 class="aboutme">About Me?</h1><br>
+        <p class="aboutme">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet modi eaque quo eius architecto exercitationem eligendi necessitatibus magnam perferendis, corporis nihil! Velit quis accusantium vero aperiam expedita? Cum aliquam optio laudantium similique neque commodi vero voluptate id sint ad, error odit praesentium illo magni aut molestiae excepturi ea sunt perferendis!</p>
+        <button type="button" class="btn btn-success">Download CV <i class="fas fa-cloud-download-alt"></i></button>
+    </div>
+    <div class="col-md-6">
+        <img class="img-fluid" src="{% static 'image/image2.png' %}" id="aboutme" alt="profile.jpg"><br>
+    </div>
+</div>
+
+<!-- progress bar -->
+<div class="row">
+    <h1 style="text-align:center;">What I Can Do.</h1>
+</div><br>
+
+<div class="row">
+    <div class="col-md-3">
+        <h3><i class="fas fa-globe"></i> Web Development</h3>
+        <div class="progress">
+            <div id="progress-bar1" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%">90%</div>
+        </div><br>
+        <h3><i class="fab fa-html5"></i> HTML & CSS</h3>
+        <div class="progress">
+            <div id="progress-bar2" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%">80%</div>
+        </div><br>
+        <h3><i class="fab fa-bootstrap"></i> Bootstrap</h3>
+        <div class="progress">
+            <div id="progress-bar3" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%">90%</div>
+        </div><br>
+    </div>
+
+    <div class="col-md-3">
+        <h3><i class="fab fa-python"></i> Python</h3>
+        <div class="progress">
+            <div id="progress-bar4" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%">80%</div>
+        </div><br>
+        <h3><i class="fas fa-server"></i> Django</h3>
+        <div class="progress">
+            <div id="progress-bar5" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%">60%</div>
+        </div><br>
+        <h3><i class="fab fa-js"></i> JavaScript</h3>
+        <div class="progress">
+            <div id="progress-bar6" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%">30%</div>
+        </div><br>
+    </div>
+
+    <div class="col-md-3">
+        <h3><i class="fas fa-diagnoses"></i> Data Scientist</h3>
+        <div class="progress">
+            <div id="progress-bar7" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%">50%</div>
+        </div><br>
+        <h3><i class="fas fa-robot"></i> Machine-Learing</h3>
+        <div class="progress">
+            <div id="progress-bar8" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%">30%</div>
+        </div><br>
+        <h3><i class="fas fa-brain"></i> Neural Network</h3>
+        <div class="progress">
+            <div id="progress-bar9" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%">30%</div>
+        </div><br>
+    </div>
+
+    <div class="col-md-3">
+        <h3><i class="fas fa-network-wired"></i> Networking</h3>
+        <div class="progress">
+            <div id="progress-bar10" class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%">80%</div>
+        </div><br>
+        <h3><i class="fab fa-linux"></i> Linux </h3>
+        <div class="progress">
+            <div id="progress-bar11" class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="75"aria-valuemin="0" aria-valuemax="100"style="width: 0%">60%</div>
+        </div><br>
+        <h3><i class="fas fa-wifi"></i> CCNA</h3>
+        <div class="progress">
+            <div id="progress-bar12" class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="75"aria-valuemin="0" aria-valuemax="100"style="width: 0%">60%</div>
+        </div><br>
+    </div><br>    
+    </div>
+
+<canvas class="webgl">
+</canvas>
+{% endblock content %} 

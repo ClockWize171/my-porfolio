@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<style>
+.carousel-item{
+    height: 100%;
+    background-color: transparent;
+
+}
+.align{
+    text-align: center,justify;
+    margin-top: 10vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-bottom: 10px;
+}
+
+.carousel-control-next,
+.carousel-control-prev{
+    width: 70px; 
+    height: 200px;
+    color: white;
+    background-color: #2F5233;
+    top: 20vh;
+    /* top: calc(50% - 25px); */
+    opacity: .8;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+p{
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 2vh;
+    line-height: 200%;
+}
+
+a{
+    transition: color 400ms;
+    font-family: 'Noto Sans Mono', monospace;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: #8AFF8A;
+}
+
+a:hover{
+    color: #00FF00;
+}
+
+img{
+    width: 70%;
+    height: 30vh;
+}
+
+button:hover{
+    opacity: 1;
+}
+</style>
+
+<div class="container">
+        <!-- Image Slider w/ Captions -->
+        <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class='align'>
+                        <img class='rounded mx-auto d-block' src="{% static 'image/project.png'%}" alt=""><br>
+                        <h1>Projects</h1>
+                        <p>This is the showcase of my project which contains the different types of projects. In this showcase, IT related or Non-IT related stuffs will be contained. For example, web developement, data analysis, 3D project, gaming-facts and etc.</p>
+                        <button type="button" class="btn btn-success btn-lg" data-bs-target="#carouselExampleControls" data-bs-slide="next">Let's Explore <i class="fas fa-arrow-circle-right"></i></button>   
+                    </div>
+                  </div>
+
+                {% for post in object_list %}
+                    <div class="carousel-item">
+                        <div class='align'>
+                            <img class='rounded mx-auto d-block' src="{{ post.picture.url }}" alt=""><br>
+                            <h1>{{ post.title }}</h1>
+                            <p>{{ post.description|linebreaks }}</p>
+                            <div class="a">
+                                <a href="{{ post.link }}">Go to link</a>
+                            </div>    
+                        </div>
+                      </div>
+                {% endfor %}
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <i class="fas fa-long-arrow-alt-left fa-2x"></i>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <i class="fas fa-long-arrow-alt-right fa-2x"></i>
+            </button>
+          </div>
+    <canvas class="webgl"></canvas>  
+</div>
+
+{% endblock content %} 
+
+<!-- Project listing
+1. my 3d projects
+2. titanic machine learning
+3. blogs
+4. Find college projects  -->
